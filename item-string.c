@@ -21,3 +21,9 @@ int cmpItem(Item item1,Item item2){
 	return strcmp(p1, p2);
 	
 }
+
+Item cloneItem(Item item){
+	char *clone= malloc(sizeof(char) * 20);
+	strcpy(clone, item);
+	return clone;
+}

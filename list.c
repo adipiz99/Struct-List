@@ -231,7 +231,7 @@ List cloneList(List list){
 	target= clone->head;
 	
 	for(source= list->head; source != NULL; source= source->next, target= target->next){
-		target->item = source->item;
+		target->item = cloneItem(source->item);
 		if (source->next == NULL)
 			target->next= NULL;
 		else

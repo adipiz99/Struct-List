@@ -29,3 +29,9 @@ int cmpItem(Item item1,Item item2){
 	else
 		return 1;
 }
+
+Item cloneItem(Item item){
+	Point p= item;
+	Point n= createPoint(ascissa(p), ordinata(p));
+	return n;
+}

@@ -20,3 +20,9 @@ int cmpItem(Item item1,Item item2){
 	return *p1-*p2;
 	
 }
+
+Item cloneItem(Item item){
+	int *clone= item;
+	Item n= clone;
+	return n;
+}
