@@ -17,6 +17,12 @@ int main() {
 	B= cloneList(A);
 	printList(B);
 	printf("\n");
+	reverseList(B);
+	printList(B);
+	printf("\n");
+	addListTail(A, inputItem());
+	printList(A);
+	printf("\n");
 	return 0;	
 }
 

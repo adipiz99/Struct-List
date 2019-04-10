@@ -191,14 +191,15 @@ int addListItem(List list, Item item, int i){
 }
 
 void addListTail(List list, Item item){
-	struct node *p;
+	addListItem(list, item, sizeList(list));
+	/*struct node *p;
 	
 	for(p= list->head; p->next != NULL; p= p->next);
 	
 	p->next= malloc(sizeof(struct node));
 	p->next->item= item;
 	p->next->next= NULL;
-	list->size++;
+	list->size++;*/
 }
 
 void reverseList(List list){
@@ -232,6 +233,7 @@ List cloneList(List list){
 	
 	for(source= list->head; source != NULL; source= source->next, target= target->next){
 		target->item = cloneItem(source->item);
+		clone->size++;
 		if (source->next == NULL)
 			target->next= NULL;
 		else
